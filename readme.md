@@ -14,11 +14,15 @@ Replace more verbose class declaration
 
 Using Stream use Filter by Predicate Object
 
-```people.stream().filter(pred).forEach(p -> System.out.println(p.getName()));```
+```
+people.stream().filter(pred).forEach(p -> System.out.println(p.getName()));
+```
 
 Using multi-threading
 
-```people.parallelStream().filter(pred).forEach(p -> System.out.println(p.getName()));```
+```
+people.parallelStream().filter(pred).forEach(p -> System.out.println(p.getName()));
+```
 
 ####Array to Stream
 
@@ -41,37 +45,39 @@ stream.forEach(p -> System.out.println(p.getInfo()));
 ####Parallel Stream 
 Most efficient way
 But not good for sequential ordering
+
 ```
 List<String> strings = new ArrayList<>();
 	for (int i = 0; i < 10000; i++) {
 		strings.add("Item " + i);
 	}
 
-	strings.stream().parallel()
-		.forEach(str -> System.out.println(str));
+strings.stream().parallel().forEach(str -> System.out.println(str));
 
 }
-	```
+```
 
 To count the Arrays
-```long count = strings.stream().count();```
+
+```
+long count = strings.stream().count();
+```
 
 To get the Sum and Average
 
 ```
 int sum = people.stream().mapToInt(p -> p.getAge()).sum();
 		
-	System.out.println("Sum of Ages : " + sum);
-	
-	OptionalDouble avg = people.stream().mapToInt(p -> p.getAge()).average();
-	
-	if(avg.isPresent()) {
-		System.out.println("Average : " + avg.getAsDouble());
-	} else {
-		System.out.println("Avg not calculated");
-	}
-``` 
+System.out.println("Sum of Ages : " + sum);
 
+OptionalDouble avg = people.stream().mapToInt(p -> p.getAge()).average();
+
+if(avg.isPresent()) {
+	System.out.println("Average : " + avg.getAsDouble());
+} else {
+	System.out.println("Avg not calculated");
+}
+``` 
 
 ##JavaScipt Engine
 
