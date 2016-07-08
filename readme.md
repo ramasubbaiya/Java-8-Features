@@ -8,9 +8,9 @@ A lambda is an anonymous function(A function without a name)
 Instantiate interface with single method
 Replace more verbose class declaration
 
-##Stream API
+###Stream API
 
-###Traversing Streams
+####Traversing Streams
 
 Using Stream use Filter by Predicate Object
 ```people.stream().filter(pred).forEach(p -> System.out.println(p.getName()));```
@@ -18,7 +18,7 @@ Using Stream use Filter by Predicate Object
 Using multi-threading
 ```people.parallelStream().filter(pred).forEach(p -> System.out.println(p.getName()));```
 
-###Array to Stream
+####Array to Stream
 
 ```Stream<Person> stream = Stream.of(people);
 		
@@ -30,9 +30,9 @@ Same as above code but using Arrays
 		
 	stream.forEach(p -> System.out.println(p.getInfo()));```
 
-###Aggregating Stream
+####Aggregating Stream
 
-##Parallel Stream 
+####Parallel Stream 
 Most efficient way
 But not good for sequential ordering
 ```List<String> strings = new ArrayList<>();
@@ -59,4 +59,46 @@ To get the Sum and Average
 			System.out.println("Average : " + avg.getAsDouble());
 		} else {
 			System.out.println("Avg not calculated");
-		}```
+		}``` 
+
+
+##JavaScipt Engine
+
+A new JavaScript engine named Nashorn.
+It replaces the older rhino engine and it can be used from the command line or in java code files
+
+```ScriptEngineManager mgr = new ScriptEngineManager();
+		ScriptEngine engine = mgr.getEngineByName("nashorn");
+		String script = "'Hello World'.length";
+		Object result = engine.eval(script);
+		System.out.println(result);```
+
+
+##String delimited list
+
+```String provinces[] = {"Ontario", "BC", "Nova Scotia", "Alberta"};
+		String provincesList = String.join(", ", provinces);```
+
+##String Joiner Class 
+```		StringJoiner sj = new StringJoiner(", ", "{ ", " }");
+		
+		sj.add("Alberta")
+		  .add("British Columbia")
+		  .add("Ontario");
+		
+		System.out.println(sj);```
+
+##Enhancements in Concurrency
+New methods to handle race condition
+Improvements to ConcurrentHashMap
+Parallel options with arrays
+New methods for composing asyn operations
+
+##New Collection methods
+Iterable : forEach()
+Collection : removeIf()
+List : replaceAll(), sort()
+Iterator : forEachRemaining
+Map : forEach(), replace(), remove(), and more
+
+
