@@ -111,16 +111,16 @@ System.out.println(sj);
 ```
 
 ##Enhancements in Concurrency
-New methods to handle race condition
-Improvements to ConcurrentHashMap
-Parallel options with arrays
-New methods for composing asyn operations
+ * New methods to handle race condition
+ * Improvements to ConcurrentHashMap
+ * Parallel options with arrays
+ * New methods for composing asyn operations
 
 ##New Collection methods
-Iterable : forEach()
-Collection : removeIf()
-List : replaceAll(), sort()
-Iterator : forEachRemaining
-Map : forEach(), replace(), remove(), and more
+ * Iterable : forEach()
+ * Collection : removeIf()
+ * List : replaceAll(), sort()
+ * Iterator : forEachRemaining
+ * Map : forEach(), replace(), remove(), and more
 
 
