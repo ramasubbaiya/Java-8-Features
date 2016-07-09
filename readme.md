@@ -93,14 +93,14 @@ System.out.println(result);
 ```
 
 
-##String delimited list
+###String delimited list
 
 ```
 String provinces[] = {"Ontario", "BC", "Nova Scotia", "Alberta"};
 String provincesList = String.join(", ", provinces);
 ```
 
-##String Joiner Class 
+###String Joiner Class 
 
 ```		
 StringJoiner sj = new StringJoiner(", ", "{ ", " }");
