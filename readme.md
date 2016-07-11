@@ -79,7 +79,7 @@ if(avg.isPresent()) {
 }
 ``` 
 
-##JavaScipt Engine
+###JavaScipt Engine
 
 A new JavaScript engine named Nashorn.
 It replaces the older rhino engine and it can be used from the command line or in java code files
@@ -93,14 +93,14 @@ System.out.println(result);
 ```
 
 
-###String delimited list
+####String delimited list
 
 ```
 String provinces[] = {"Ontario", "BC", "Nova Scotia", "Alberta"};
 String provincesList = String.join(", ", provinces);
 ```
 
-###String Joiner Class 
+####String Joiner Class 
 
 ```		
 StringJoiner sj = new StringJoiner(", ", "{ ", " }");
@@ -110,13 +110,13 @@ StringJoiner sj = new StringJoiner(", ", "{ ", " }");
 System.out.println(sj);
 ```
 
-##Enhancements in Concurrency
+###Enhancements in Concurrency
  * New methods to handle race condition
  * Improvements to ConcurrentHashMap
  * Parallel options with arrays
  * New methods for composing asyn operations
 
-##New Collection methods
+###New Collection methods
  * Iterable : forEach()
  * Collection : removeIf()
  * List : replaceAll(), sort()
